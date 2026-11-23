@@ -35,17 +35,18 @@ a{color:inherit}
 
 /* ---------- header ---------- */
 .top{position:sticky;top:0;z-index:20;background:rgba(244,243,240,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--chalk)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:88px;gap:20px}
 .logo{display:flex;align-items:center;text-decoration:none;font-stretch:125%;font-weight:800;font-size:17px;letter-spacing:.02em}
-.logo img{height:40px;width:auto}
-.nav{display:flex;gap:28px;align-items:center;font-size:15px}
+.logo img{height:58px;width:auto}
+@media (max-width:760px){.top .wrap{height:76px}.logo img{height:48px}}
+.nav{display:flex;gap:34px;align-items:center;font-size:17px;font-weight:500}
 .nav a{text-decoration:none}
 .nav a:hover{text-decoration:underline;text-underline-offset:4px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);font:inherit;font-weight:700;font-size:15px;text-decoration:none;cursor:pointer;border-radius:999px;transition:background .15s,color .15s}
 .btn:hover{background:var(--paper);color:var(--ink)}
 .btn.ghost{background:transparent;color:var(--ink)}
 .btn.ghost:hover{background:var(--ink);color:var(--paper)}
-.nav .btn{min-height:40px;padding:0 18px}
+.nav .btn{min-height:46px;padding:0 22px;font-size:16px}
 @media (max-width:760px){.nav a:not(.btn){display:none}}
 
 /* ---------- hero ---------- */
