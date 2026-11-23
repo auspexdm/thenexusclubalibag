@@ -140,6 +140,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .dock a{flex:1;min-height:48px;display:flex;align-items:center;justify-content:center;border-radius:999px;color:var(--paper);text-decoration:none;font-weight:700;font-size:15px}
 .dock a:first-child{background:var(--paper);color:var(--ink)}
 @media (max-width:760px){.dock{display:flex}}
+.wa{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom));z-index:40;display:flex;align-items:center;gap:10px;height:60px;padding:0 16px;border-radius:999px;background:var(--ink);color:var(--paper);border:2px solid var(--paper);text-decoration:none;font-weight:700;font-size:15px;box-shadow:0 8px 24px rgba(28,28,28,.25);transition:transform .2s ease}
+.wa:hover{transform:translateY(-3px)}
+.wa .lbl{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .35s ease}
+.wa:hover .lbl,.wa:focus-visible .lbl{max-width:200px}
+.wa:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+@media (max-width:760px){.wa{right:14px;bottom:calc(84px + env(safe-area-inset-bottom));height:56px;padding:0 14px}}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;transition-duration:.001ms!important}
@@ -215,7 +221,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <ul id="plist"></ul>
           <div class="actions">
             <a class="btn" href="tel:+919881880499">Call to join</a>
-            <a class="btn ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSfJljLtNAi4-WIQybQApFmsiiwQ8ekGPt2APsRNpK3R146dQw/viewform" target="_blank" rel="noopener">Send an enquiry</a>
+            <a class="btn ghost" href="https://wa.me/919881880499?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20membership%20at%20The%20Nexus%20Club." target="_blank" rel="noopener">Message on WhatsApp</a>
           </div>
         </div>
       </div>
@@ -279,6 +285,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <span>Prices include all plan benefits listed. T&amp;C apply.</span>
   </div>
 </footer>
+
+<a class="wa" href="https://wa.me/919881880499?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20membership%20at%20The%20Nexus%20Club." target="_blank" rel="noopener" aria-label="Message us on WhatsApp"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-8.4 14.8L2.3 21.7l4.8-1.3A9.8 9.8 0 1 0 12 2.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 7.4c.3-.6.6-.6.9-.6h.6c.2 0 .4.1.5.4l.8 1.9c.1.2 0 .5-.1.7l-.6.7c-.1.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.1.6 0l.7-.6c.2-.2.5-.2.7-.1l1.9.8c.3.1.4.3.4.5v.6c0 .3 0 .6-.6.9-.6.4-1.6.7-2.8.3-1.9-.7-3.7-2.5-4.4-4.4-.4-1.2-.1-2.2.3-2.8z" fill="currentColor"/></svg><span class="lbl">WhatsApp us</span></a>
 
 <nav class="dock" id="dock" aria-label="Quick actions">
   <a href="tel:+919881880499">Call us</a>
